@@ -1,0 +1,31 @@
+{
+  "name": "type-safe-spa-mantine",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Type-safe single page application template with Mantine.",
+  "main": "index.js",
+  "scripts": {
+    "quickstart": "pnpm i && cp .env.template .env && pnpm db start && pnpm db run bootstrap && pnpm dev",
+    "web": "pnpm -F \"web\"",
+    "api": "pnpm -F \"api\"",
+    "db": "pnpm -F \"db\"",
+    "dev": "pnpm --parallel -F \"./**\" dev",
+    "test": "pnpm --parallel -F \"./**\" test"
+  },
+  "author": "kuomory",
+  "license": "MIT",
+  "engines": {
+    "pnpm": "10.15.0",
+    "npm": "please_use_pnpm_instead"
+  },
+  "packageManager": "pnpm@10.15.0",
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.5",
+    "dotenv-cli": "^10.0.0",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  },
+  "workspaces": [
+    "services/*"
+  ]
+}

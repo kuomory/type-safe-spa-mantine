@@ -1,0 +1,28 @@
+{
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "editor.tabSize": 2,
+  "remote.portsAttributes": {
+    "443": {
+      "protocol": "https"
+    },
+    "8443": {
+      "protocol": "https"
+    },
+    "5432": {
+      "label": "db",
+      "onAutoForward": "ignore"
+    },
+    "3000": {
+      "label": "api",
+      "onAutoForward": "ignore"
+    },
+    "5173": {
+      "label": "web",
+      "onAutoForward": "ignore"
+    },
+    "5555": {
+      "label": "prisma studio",
+      "onAutoForward": "ignore"
+    }
+  }
+}

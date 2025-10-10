@@ -1,0 +1,24 @@
+{
+  "name": "@workspace/db",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "docker compose up -d",
+    "stop": "docker compose down",
+    "generate": "prisma generate",
+    "studio": "dotenv -e ../../.env -- prisma studio",
+    "migrate": "dotenv -e ../../.env -- prisma migrate dev",
+    "bootstrap": "dotenv -e ../../.env -- prisma migrate dev --name init && dotenv -e ../../.env -- prisma db seed",
+    "reset": "prisma generate && dotenv -e ../../.env -- prisma migrate reset --force"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@prisma/client": "^6.16.3",
+    "@types/node": "^24.6.2",
+    "@workspace/api": "workspace:*",
+    "prisma": "^6.16.3",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}

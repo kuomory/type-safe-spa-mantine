@@ -1,0 +1,42 @@
+{
+  "name": "@workspace/web",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "start": "vite preview",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@mantine/core": "^8.3.3",
+    "@mantine/hooks": "^8.3.3",
+    "@mantine/modals": "^8.3.4",
+    "@tabler/icons-react": "^3.35.0",
+    "@tanstack/react-query": "^5.90.2",
+    "@tanstack/react-router": "^1.132.31",
+    "@tanstack/react-router-devtools": "^1.132.31",
+    "@trpc/client": "^11.6.0",
+    "@trpc/tanstack-react-query": "^11.6.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "superjson": "^2.2.2",
+    "zod": "^4.1.11"
+  },
+  "devDependencies": {
+    "@tanstack/router-plugin": "^1.132.31",
+    "@types/node": "^24.6.0",
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react-swc": "^4.1.0",
+    "@workspace/api": "workspace:*",
+    "@workspace/db": "workspace:*",
+    "globals": "^16.4.0",
+    "postcss": "^8.5.6",
+    "postcss-preset-mantine": "^1.18.0",
+    "postcss-simple-vars": "^7.0.1",
+    "typescript": "~5.9.3",
+    "vite": "^7.1.9"
+  }
+}
