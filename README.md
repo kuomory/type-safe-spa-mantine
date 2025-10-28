@@ -15,6 +15,11 @@ pnpm quickstart
 
 ## Guide
 
+### Requirements
+- docker
+- node
+- pnpm
+
 ### Frameworks & Main Libraries
 
 - Vite
