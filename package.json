@@ -10,15 +10,18 @@
     "api": "pnpm -F \"api\"",
     "db": "pnpm -F \"db\"",
     "dev": "pnpm --parallel -F \"./**\" dev",
-    "test": "pnpm --parallel -F \"./**\" test"
+    "test": "pnpm --parallel -F \"./**\" test",
+    "build": "pnpm --parallel -F \"./**\" build",
+    "preview": "pnpm --parallel -F \"./**\" preview"
   },
   "author": "kuomory",
   "license": "MIT",
   "engines": {
-    "pnpm": "10.15.0",
+    "pnpm": "10.19.0",
     "npm": "please_use_pnpm_instead"
   },
-  "packageManager": "pnpm@10.15.0",
+  "packageManager": "pnpm@10.19.0",
+  "dependencies": {},
   "devDependencies": {
     "@biomejs/biome": "^2.2.5",
     "dotenv-cli": "^10.0.0",

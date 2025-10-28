@@ -7,5 +7,8 @@ export const list = publicProcedure.input(z.void()).query(async () => {
     include: {
       Category: true,
     },
+    orderBy: {
+      updatedAt: "desc",
+    },
   });
 });

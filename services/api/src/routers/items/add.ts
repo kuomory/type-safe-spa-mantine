@@ -7,7 +7,7 @@ export const add = publicProcedure
     z.object({
       name: z.string().min(1),
       description: z.string().optional(),
-      categoryKey: z.nanoid().optional(),
+      categoryKey: z.nanoid(),
     }),
   )
   .mutation(async ({ input }) => {
