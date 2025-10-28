@@ -1,4 +1,5 @@
 import { publicProcedure, router } from "../trpc";
+import { categories } from "./categories";
 import { items } from "./items";
 
 export const appRouter = router({
@@ -6,6 +7,7 @@ export const appRouter = router({
     return { message: "Hello world!" };
   }),
   items,
+  categories,
 });
 
 export type AppRouter = typeof appRouter;

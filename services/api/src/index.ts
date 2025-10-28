@@ -7,12 +7,14 @@ import fastify from "fastify";
 import { type AppRouter, appRouter } from "./routers";
 import "dotenv/config";
 
+if (!process.env.WEB_FRONT_URL) throw new Error("No Env Value `WEB_FRONT_URL`");
+
 const server = fastify({
   logger: true,
 });
 
 server.register(cors, {
-  origin: ["http://localhost:5173"],
+  origin: [process.env.WEB_FRONT_URL],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: false,
 });

@@ -1,6 +1,9 @@
 import { Paper, Stack, Text, UnstyledButton } from "@mantine/core";
-import type { Category, Item } from "@workspace/api/generated/prisma/client";
+import { openContextModal } from "@mantine/modals";
+import type { Category, Item } from "@workspace/db";
 import { useCallback } from "react";
+import { CategoryLabel } from "./CategoryLabel";
+import type { ContextModal } from "./modals";
 
 type Props = {
   item: Item & { Category: Category };
@@ -9,16 +12,17 @@ type Props = {
 export function ItemCard(props: Props) {
   const { item } = props;
   const handleClick = useCallback(() => {
-    // openContextModal<ContextModal>({
-    // });
-  }, []);
+    openContextModal<ContextModal>({
+      modal: "ItemDetails",
+      title: item.name,
+      innerProps: { item },
+    });
+  }, [item]);
   return (
     <UnstyledButton key={item.key} display="grid" onClick={handleClick}>
       <Paper withBorder shadow="md" p="sm">
         <Stack gap="xs">
-          <Text size="sm" bg="indigo" c="white" w="fit-content" p="4 12">
-            {item.Category.name}
-          </Text>
+          <CategoryLabel category={item.Category} />
           <Text size="xl" fw="bold">
             {item.name}
           </Text>
