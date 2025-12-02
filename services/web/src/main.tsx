@@ -9,6 +9,10 @@ import { theme } from "./theme";
 import { queryClient, trpcClient } from "./trpc";
 import "@mantine/core/styles.css";
 
+if (window.location.host === "127.0.0.1:5173") {
+  window.location.href = "http://localhost:5173";
+}
+
 const context = {
   trpc: trpcClient,
 };

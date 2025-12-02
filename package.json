@@ -12,7 +12,8 @@
     "dev": "pnpm --parallel -F \"./**\" dev",
     "test": "pnpm --parallel -F \"./**\" test",
     "build": "pnpm --parallel -F \"./**\" build",
-    "preview": "pnpm --parallel -F \"./**\" preview"
+    "preview": "pnpm --parallel -F \"./**\" preview",
+    "check": "biome check --write ."
   },
   "author": "kuomory",
   "license": "MIT",
